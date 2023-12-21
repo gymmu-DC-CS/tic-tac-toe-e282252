@@ -42,7 +42,6 @@ function boxClicked(e) {
 }
 
 const hasPlayerWon = (player) => {
-  //from top left, check across, down, and diagonal
   if (spaces[0] === player) {
     if (spaces[1] === player && spaces[2] === player) {
       console.log(`${player} wins up top`);
@@ -57,7 +56,6 @@ const hasPlayerWon = (player) => {
       return true;
     }
   }
-  //from bottom check up and across
   if (spaces[8] === player) {
     if (spaces[2] === player && spaces[5] === player) {
       console.log(`${player} wins on the right`);
@@ -68,7 +66,6 @@ const hasPlayerWon = (player) => {
       return true;
     }
   }
-  //from middle check middle vertical and middle horizontal
   if (spaces[4] === player) {
     if (spaces[3] === player && spaces[5] === player) {
       console.log(`${player} wins on the middle horizontal`);
